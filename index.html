@@ -4,14 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
   <title>Fill Her Heart with Love</title>
   <style>
-    body {
+   body {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       text-align: center;
-      margin: 50px;
+      margin: 10px;
+      min-height: 90vh; /* Ensure the body takes at least the full height of the viewport */
+      display: flex;
+      flex-direction: column;
     }
-
     input {
       background: rgb(148, 197, 213);
       border: none;
@@ -191,22 +194,30 @@
       animation-delay: 20s;
       
     }
+    footer {
+      margin-top: auto;
+      color: black;
+      padding: 10px;
+    }
   </style>
 </head>
 
 <body>
   <h1>Fill Her Heart with Love</h1>
   <p>Enter the name of your lover:</p>
-  <input type="text" id="loverName" placeholder="Enter Her Name">
+  <div>
+  <input type="text" id="loverName" placeholder="Enter Her Name"> <br> <br>
   <button id="fill">Fill Her Heart</button>
-
+</div>
   <div id="message">
     <p class="search animate-1">Searching her Heart in system.......</p>
     <p class="found animate">Found Her Heart 💓</p>
     <div class="heart animate-3" id="heart"></div>
     <p class="message_ animate-2">Successfully Filled <span id="loverSpan"></span>'s heart with your love 😍</p>
   </div>
-
+  <footer>
+    <p>&copy; 2023 Diwash Pandey. All rights reserved.</p>
+  </footer>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var loadingBar = document.getElementById('heart');
